@@ -1,0 +1,230 @@
+.ct-container{background: white;height:100%; width:100vw;overflow-x: hidden;}
+
+
+
+.ct-container .ct-header{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: sticky;
+    top: 0;
+    height:10%;
+    background: white;
+
+
+}
+.ct-logo img {
+    width:130px; /* Set the desired width of the logo */
+    height: 120px; /* Maintain aspect ratio */
+    margin-top: -17px; /* Add top margin for spacing, adjust as needed */
+
+}
+
+.ct-searchbar {
+    flex-grow: 1; /* Allow the search bar to take up remaining space */
+    margin-left: 15px;
+    /* Adjust the left margin for spacing, change as needed */
+}
+
+
+.ct-searchbar input {
+    width: 100%; /* Take up 100% of the available width within .searchbar */
+    padding: 10px; /* Add padding for better visual appearance, adjust as needed */
+    box-sizing: border-box;
+    margin-top: 14px;
+    background-color: white; /* Include padding in the width calculation */
+    color: black;
+    border-radius:40px ;
+    font-size: 16px;
+    border: 2px solid black;
+    outline: none;
+
+}
+
+.ct-searchbar input::placeholder {
+    color: black; /* Change the color of the placeholder text */
+    font-size: 16px; /* Adjust the font size of the placeholder text */
+}
+
+.ct-btn-wrapper button {
+    margin-left: 10px;
+    background-color:white;
+    color: black;
+    padding: 25px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    font-size: 18px;
+    height: 60px;
+
+}
+.ct-search_button button{
+    margin-left:-43px;
+    margin-top: 23px;
+    background-color:white;
+    color: black;
+    cursor: pointer;
+    padding:5px;
+    border: none;
+
+}
+.ct-search_button i {
+    font-size: 20px; /* Adjust the font size of the icon */
+    margin-right: 5px;}/* Add spacing between the icon and text */
+.ct-btn-wrapper button i {
+    font-size: 20px; /* Adjust the font size of the icon */
+    margin-right: 5px; /* Add spacing between the icon and text */
+}
+.ct-btn_before button {
+    margin-left: 10px;
+    background-color:white;
+    color: black;
+    padding: 25px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    font-size: 18px;
+    height: 60px;
+
+}
+.ct-btn_before button i {
+    font-size: 20px; /* Adjust the font size of the icon */
+    margin-right: 5px;}/* Add spacing between the icon and text */
+.ct-container .ct-footer{
+
+
+    display: flex;
+    height:40% ;
+    background: black;
+    /*margin-top: 20px;*/
+    font-size: 5px;
+    /*align-items: flex-end;*/
+    justify-content: space-around;
+
+}
+.ct-footer .ct-get-help{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 35px;
+
+
+}
+.ct-footer .ct-about-us{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: -75px;
+
+}
+.ct-footer .ct-logos{
+    display: flex;
+    align-items: center;
+    /*justify-content: space-evenly;*/
+
+}
+.ct-logos img{
+    padding: 8px}
+.ct-get-help button{
+    background-color: black;
+    color: grey;
+    font-size: 14px;
+    border: none;
+
+}
+.ct-get-help button:hover {
+    color: white; /* Change to the desired color on hover */
+}
+.ct-get-help span{
+    font-size: 13px;
+    margin-top: 15px;
+    color: lightgrey;
+    /*padding-bottom: -50px;*/
+    /*margin-bottom: -60px;*/
+
+
+}
+.ct-about-us button{
+    background-color: black;
+    color: grey;
+    font-size: 14px;
+    border: none;
+
+}
+.ct-about-us button:hover {
+    color: white; /* Change to the desired color on hover */
+}
+
+
+.ct-logos span{
+    font-size: 16px;
+    color: lightgrey;
+
+}
+
+.ct-logos img{
+    cursor: pointer;
+}
+
+.ct-body {
+    height: 50%;
+    background-color: lightgray;
+    color: black;
+    padding: 70px;
+}
+
+.ct-body h1{
+    font-size: 25px;
+    color: black;
+}
+
+.ct-address i{
+    font-size: 20px;
+}
+.ct-mail i{
+    font-size: 20px;
+}
+.ct-phone i{
+    font-size: 20px;
+}
+.ct-address span{
+    font-size: 20px;
+    margin: 20px;
+}
+.ct-mail span{
+    font-size: 20px;
+    margin: 20px;
+}
+.ct-phone span{
+    font-size: 20px;
+    margin: 20px;
+}
+.ct-about-us h1{
+    color: white;
+    font-size: 15px;
+}
+.ct-get-help h1{
+    color: white;
+    font-size: 15px;
+}
+.ct-btn_before button{
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease; /* Add a smooth transition effect */
+}
+/* Change the border color when the button is hovered */
+.ct-btn_before button:hover {
+    border-bottom-color: black; /* Change to your desired border color */
+}
+.ct-btn-wrapper button{
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease; /* Add a smooth transition effect */
+}
+/* Change the border color when the button is hovered */
+.ct-btn-wrapper button:hover {
+    border-bottom-color: black; /* Change to your desired border color */
+}
+
+

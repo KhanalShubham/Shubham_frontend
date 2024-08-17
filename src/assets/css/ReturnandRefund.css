@@ -1,0 +1,210 @@
+.rr-container{background: white;height:100%; width:100vw;overflow-x: hidden;}
+
+
+.rr-container .rr-header{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: sticky;
+    top: 0;
+    height:10%;
+    background: white;
+
+
+}
+.rr-logo img {
+    width:130px; /* Set the desired width of the logo */
+    height: 120px; /* Maintain aspect ratio */
+    margin-top: -17px; /* Add top margin for spacing, adjust as needed */
+
+}
+
+.rr-searchbar {
+    flex-grow: 1; /* Allow the search bar to take up remaining space */
+    margin-left: 15px;
+    /* Adjust the left margin for spacing, change as needed */
+}
+
+
+.rr-searchbar input {
+    width: 100%; /* Take up 100% of the available width within .searchbar */
+    padding: 10px; /* Add padding for better visual appearance, adjust as needed */
+    box-sizing: border-box;
+    margin-top: 14px;
+    background-color: white; /* Include padding in the width calculation */
+    color: black;
+    border-radius:40px ;
+    font-size: 16px;
+    border: 2px solid black;
+    outline: none;
+
+}
+
+.rr-searchbar input::placeholder {
+    color: black; /* Change the color of the placeholder text */
+    font-size: 16px; /* Adjust the font size of the placeholder text */
+}
+
+.rr-btn-wrapper button {
+    margin-left: 10px;
+    background-color:white;
+    color: black;
+    padding: 25px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    font-size: 18px;
+    height: 60px;
+
+}
+.rr-search_button button{
+    margin-left:-43px;
+    margin-top: 23px;
+    background-color:white;
+    color: black;
+    cursor: pointer;
+    padding:5px;
+    border: none;
+
+}
+.rr-search_button i {
+    font-size: 20px; /* Adjust the font size of the icon */
+    margin-right: 5px;}/* Add spacing between the icon and text */
+.rr-btn-wrapper button i {
+    font-size: 20px; /* Adjust the font size of the icon */
+    margin-right: 5px; /* Add spacing between the icon and text */
+}
+.rr-btn_before button {
+    margin-left: 10px;
+    background-color:white;
+    color: black;
+    padding: 25px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    font-size: 18px;
+    height: 60px;
+
+}
+.rr-btn_before button i {
+    font-size: 20px; /* Adjust the font size of the icon */
+    margin-right: 5px;}/* Add spacing between the icon and text */
+.rr-container .rr-footer{
+
+
+    display: flex;
+    height:40% ;
+    background: black;
+    /*margin-top: 20px;*/
+    font-size: 5px;
+    /*align-items: flex-end;*/
+    justify-content: space-around;
+
+}
+.rr-footer .rr-get-help{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 35px;
+
+
+}
+.rr-footer .rr-about-us{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: -75px;
+
+}
+.rr-footer .rr-logos{
+    display: flex;
+    align-items: center;
+    /*justify-content: space-evenly;*/
+
+}
+.rr-logos img{
+    padding: 8px}
+.rr-get-help button{
+    background-color: black;
+    color: grey;
+    font-size: 14px;
+    border: none;
+
+}
+.rr-get-help button:hover {
+    color: white; /* Change to the desired color on hover */
+}
+.rr-get-help span{
+    font-size: 13px;
+    margin-top: 15px;
+    color: lightgrey;
+    /*padding-bottom: -50px;*/
+    /*margin-bottom: -60px;*/
+
+
+}
+.rr-about-us button{
+    background-color: black;
+    color: grey;
+    font-size: 14px;
+    border: none;
+
+}
+.rr-about-us button:hover {
+    color: white; /* Change to the desired color on hover */
+}
+
+
+.rr-logos span{
+    font-size: 16px;
+    color: lightgrey;
+
+}
+
+.rr-logos img{
+    cursor: pointer;
+}
+
+.rr-body {
+    height: 85%;
+    background-color: lightgray;
+    color: black;
+    padding: 70px;
+
+}
+
+.rr-body p{
+    font-size: 18px;
+}
+.rr-body h2{
+    font-size: 23px;
+}
+.rr-about-us h1{
+    color: white;
+    font-size: 15px;
+}
+.rr-get-help h1{
+    color: white;
+    font-size: 15px;
+}
+.rr-btn_before button{
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease; /* Add a smooth transition effect */
+}
+/* Change the border color when the button is hovered */
+.rr-btn_before button:hover {
+    border-bottom-color: black; /* Change to your desired border color */
+}
+.rr-btn-wrapper button{
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease; /* Add a smooth transition effect */
+}
+/* Change the border color when the button is hovered */
+.rr-btn-wrapper button:hover {
+    border-bottom-color: black; /* Change to your desired border color */
+}
+
+

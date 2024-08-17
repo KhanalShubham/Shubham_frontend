@@ -1,0 +1,224 @@
+.au-container{background: white;height:100%; width:100vw;overflow-x: hidden;}
+
+
+
+
+.au-container .au-header{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: sticky;
+    top: 0;
+    height:10%;
+    background: white;
+
+
+}
+.au-logo img {
+    width:130px; /* Set the desired width of the logo */
+    height: 120px; /* Maintain aspect ratio */
+    margin-top: -17px; /* Add top margin for spacing, adjust as needed */
+
+
+}
+
+.au-searchbar {
+    flex-grow: 1; /* Allow the search bar to take up remaining space */
+    margin-left: 15px;
+    /* Adjust the left margin for spacing, change as needed */
+}
+
+
+.au-searchbar input {
+    width: 100%; /* Take up 100% of the available width within .searchbar */
+    padding: 10px; /* Add padding for better visual appearance, adjust as needed */
+    box-sizing: border-box;
+    margin-top: 14px;
+    background-color: white; /* Include padding in the width calculation */
+    color: black;
+    border-radius:40px ;
+    font-size: 16px;
+    border: 2px solid black;
+    outline: none;
+
+}
+
+.au-searchbar input::placeholder {
+    color: black; /* Change the color of the placeholder text */
+    font-size: 16px; /* Adjust the font size of the placeholder text */
+}
+
+.au-btn-wrapper button {
+    margin-left: 10px;
+    background-color:white;
+    color: black;
+    padding: 25px 10px;
+    cursor: pointer;
+    border: none;
+    /*border-radius: 4px;*/
+    font-size: 18px;
+    height: 60px;
+    border-radius: 0;
+
+}
+
+.au-search_button button{
+    margin-left:-43px;
+    margin-top: 23px;
+    background-color:white;
+    color: black;
+    cursor: pointer;
+    padding:5px;
+    border: none;
+
+
+
+}
+
+.au-search_button i {
+    font-size: 20px; /* Adjust the font size of the icon */
+    margin-right: 5px;}/* Add spacing between the icon and text */
+.au-btn-wrapper button i {
+    font-size: 20px; /* Adjust the font size of the icon */
+    margin-right: 5px; /* Add spacing between the icon and text */
+}
+.au-btn_before button {
+    margin-left: 10px;
+    background-color:white;
+    color: black;
+    padding: 25px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    font-size: 18px;
+    height: 60px;
+
+}
+
+.au-btn_before button{
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease; /* Add a smooth transition effect */
+}
+/* Change the border color when the button is hovered */
+.au-btn_before button:hover {
+    border-bottom-color: black; /* Change to your desired border color */
+}
+.au-btn-wrapper button{
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease; /* Add a smooth transition effect */
+}
+/* Change the border color when the button is hovered */
+.au-btn-wrapper button:hover {
+    border-bottom-color: black; /* Change to your desired border color */
+}
+
+/*.au-btn_before button i {*/
+/*    font-size: 20px; !* Adjust the font size of the icon *!*/
+/*    margin-right: 5px;}!* Add spacing between the icon and text *!*/
+.au-container .au-footer{
+
+
+    display: flex;
+    height:40% ;
+    background: black;
+    /*margin-top: 20px;*/
+    font-size: 5px;
+    /*align-items: flex-end;*/
+    justify-content: space-around;
+
+}
+.au-footer .au-get-help{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 35px;
+
+
+}
+.au-footer .au-about-us{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: -75px;
+
+}
+.au-footer .au-logos{
+    display: flex;
+    align-items: center;
+    /*justify-content: space-evenly;*/
+
+}
+.au-logos img{
+    padding: 8px}
+.au-get-help button{
+    background-color: black;
+    color: grey;
+    font-size: 14px;
+    border: none;
+
+}
+.au-get-help button:hover {
+    color: white; /* Change to the desired color on hover */
+}
+.au-get-help span{
+    font-size: 13px;
+    margin-top: 15px;
+    color: lightgrey;
+    /*padding-bottom: -50px;*/
+    /*margin-bottom: -60px;*/
+
+
+}
+.au-about-us button{
+    background-color: black;
+    color: grey;
+    font-size: 14px;
+    border: none;
+
+}
+.au-about-us button:hover {
+    color: white; /* Change to the desired color on hover */
+}
+
+
+.au-logos span{
+    font-size: 16px;
+    color: lightgrey;
+
+}
+
+.au-logos img{
+    cursor: pointer;
+}
+
+.au-body {
+    height: 155%;
+    background-color: lightgray;
+    color: black;
+    padding: 70px;
+
+}
+.au-body h1{
+    font-size: 23px;
+}
+.au-body p{
+    font-size: 18px;
+}
+.au-about-us h1{
+    color: white;
+    font-size: 15px;
+}
+.au-get-help h1{
+    color: white;
+    font-size: 15px;
+}
+.au-body h2{
+    font-size: 20px;
+}
+
+
+
+

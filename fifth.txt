@@ -1,0 +1,13 @@
+<html>
+<head>
+	<title>My page
+		</title>
+</head>
+<body>
+<<<<<<< HEAD
+	I live in NY
+=======
+	I live in New York City changes
+>>>>>>> f1909fb9eba7e3616ba51ed70267176418890332
+</body>
+</html>

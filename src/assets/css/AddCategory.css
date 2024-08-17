@@ -1,0 +1,224 @@
+.ac-container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+
+
+}
+.ac-buttons{
+    width: 17vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+
+
+}
+.ac-btn{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    width: 16vw;
+    margin-left: 8px;
+}
+.ac-btn button{
+    text-align: left;
+    background-color: white;
+    color: black;
+}
+.ac-btn button i{
+    margin-right: 10px;
+}
+.ac-top span{
+    font-size: 21px;
+    font-weight: bold;
+}
+.ac-top i{
+    font-size: 21px;
+    margin-left: 13px;
+}
+
+.ac-btn button.products:hover {
+    background-color: lightgray;
+
+
+}
+.ac-btn button.product{
+    background-color: lightgrey;
+}
+
+.ac-display h2{
+    font-size: 20px;
+}
+.ac-display{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    row-gap: 20px;
+}
+.ac-display input{
+    background-color: white;
+    width: 200%;
+    color: black;
+    border: 2px solid black;
+}
+.ac-desc{
+    height: 90px;
+}
+.ac-display input::placeholder{
+    color: black;
+}
+.ap-dropbtn{
+    background-color: lightgrey;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    width: 99%;
+
+}
+
+/*.dropdown {*/
+/*    position: relative;*/
+/*    display: inline-block;*/
+/*}*/
+.ap-dropdown i{
+    margin-left: 7px;
+}
+
+
+
+/* Dropdown Content (Hidden by Default) */
+.ap-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+    margin-left: 113px;
+}
+
+/* Links inside the dropdown */
+.ap-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+button.ap-dropbtn{
+    height: 46%;
+
+
+}
+
+/* Change color of dropdown links on hover */
+.ap-dropdown-content a:hover {background-color: lightgrey;color: black}
+
+/* Show the dropdown menu on hover */
+.ap-dropdown:hover .ap-dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.ap-dropdown:hover .ap-dropbtn {background-color: lightgrey}
+
+.cgr-dropbtn{
+    background-color: lightgrey;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    width: 99%;
+}
+.cgr-dropdown i{
+    margin-left: 7px;
+}
+.cgr-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+    margin-left: 105px;
+}
+.cgr-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+button.cgr-dropbtn{
+    height: 46%;
+}
+.cgr-dropdown-content a:hover {background-color: lightgrey;color: black}
+.cgr-dropdown:hover .cgr-dropdown-content {display: block;}
+.cgr-dropdown:hover .cgr-dropbtn {background-color: lightgrey}
+
+.brd-dropbtn{
+    background-color: lightgrey;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    width: 99%;
+}
+.brd-dropdown i{
+    margin-left: 7px;
+}
+.brd-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+    margin-left: 125px;
+}
+.brd-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+button.brd-dropbtn{
+    height: 46%;
+}
+.brd-dropdown-content a:hover {background-color: lightgrey;color: black}
+.brd-dropdown:hover .brd-dropdown-content {display: block;}
+.brd-dropdown:hover .brd-dropbtn {background-color: lightgrey}
+
+
+.pr-dropbtn{
+    background-color: lightgrey;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    width: 99%;
+}
+.pr-dropdown i{
+    margin-left: 7px;
+}
+.pr-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 70px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+    margin-left: 85px;
+}
+.pr-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+button.pr-dropbtn{
+    height: 46%;
+}
+.pr-dropdown-content a:hover {background-color: lightgrey;color: black}
+.pr-dropdown:hover .pr-dropdown-content {display: block;}
+.pr-dropdown:hover .pr-dropbtn {background-color: lightgrey}
+

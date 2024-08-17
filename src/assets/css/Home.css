@@ -1,0 +1,481 @@
+.home-container{background: white;}
+
+.home-btn_before button{
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease; /* Add a smooth transition effect */
+}
+/* Change the border color when the button is hovered */
+.home-btn_before button:hover {
+    border-bottom-color: black; /* Change to your desired border color */
+}
+.home-btn_after button{
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease; /* Add a smooth transition effect */
+}
+/* Change the border color when the button is hovered */
+.home-btn_after button:hover {
+    border-bottom-color: black; /* Change to your desired border color */
+}
+
+.home-btn-wrapper button{
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease; /* Add a smooth transition effect */
+}
+/* Change the border color when the button is hovered */
+.home-btn-wrapper button:hover {
+    border-bottom-color: black; /* Change to your desired border color */
+}
+
+.home-container .home-header{
+    display:flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: sticky;
+    top: 0;
+    height: 10vh;
+    z-index: 1000;
+}
+@media only screen and (max-width: 768px) {
+    .home-container .home-header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .home-container .home-header button {
+        display: block; /* Show the button on smaller screens */
+        margin-top: 10px; /* Add some space between the button and other items */
+    }
+}
+
+
+.home-btn_after {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.home-btn_after button {
+    margin-left: 10px;
+    background-color: white;
+    color: black;
+    padding: 25px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    font-size: 18px;
+    height: 60px;
+
+}
+
+/* Adjust the styling for other buttons as needed */
+
+.home-logo img {
+    width:130px; /* Set the desired width of the logo */
+    height: 120px; /* Maintain aspect ratio */
+    margin-top: -17px; /* Add top margin for spacing, adjust as needed */
+
+}
+
+.s-searchbar {
+    flex-grow: 1; /* Allow the search bar to take up remaining space */
+    margin-left: 15px;
+    /* Adjust the left margin for spacing, change as needed */
+}
+
+
+.s-searchbar input {
+    width: 100%; /* Take up 100% of the available width within .searchbar */
+    padding: 10px; /* Add padding for better visual appearance, adjust as needed */
+    box-sizing: border-box;
+    margin-top: 14px;
+    background-color: white; /* Include padding in the width calculation */
+    color: black;
+    border-radius:40px ;
+    font-size: 16px;
+    border: 2px solid black;
+    outline: none;
+
+}
+
+.s-searchbar input::placeholder {
+    color: black; /* Change the color of the placeholder text */
+    font-size: 16px; /* Adjust the font size of the placeholder text */
+}
+
+.home-btn-wrapper button {
+    margin-left: 10px;
+    background-color:white;
+    color: black;
+    padding: 25px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    font-size: 18px;
+    height: 60px;
+
+}
+.s-search_button button{
+    margin-left:-43px;
+    margin-top: 23px;
+    background-color:white;
+    color: black;
+    cursor: pointer;
+    padding:5px;
+    border: none;
+
+
+}
+.s-search_button i {
+    font-size: 20px; /* Adjust the font size of the icon */
+    margin-right: 5px;}/* Add spacing between the icon and text */
+.home-btn-wrapper button i {
+    font-size: 20px; /* Adjust the font size of the icon */
+    margin-right: 5px; /* Add spacing between the icon and text */
+}
+.home-btn_before button {
+    margin-left: 10px;
+    background-color:white;
+    color: black;
+    padding: 25px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    font-size: 18px;
+    height: 60px;
+
+}
+
+.home-btn_before button i {
+    font-size: 20px; /* Adjust the font size of the icon */
+    margin-right: 5px;}/* Add spacing between the icon and text */
+
+.home-btn-cat button {
+    margin-left: 10px;
+    background-color:white;
+    color: black;
+    padding: 25px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    font-size: 18px;
+    height: 60px;
+
+}
+
+.home-btn-cat button i {
+    font-size: 20px; /* Adjust the font size of the icon */
+    margin-right: 5px;}
+
+
+.home-container .home-footer{
+
+
+    display: flex;
+    height:40% ;
+    background: black;
+    /*margin-top: 20px;*/
+    font-size: 5px;
+    /*align-items: flex-end;*/
+    justify-content: space-around;
+
+}
+.home-footer .home-get-help{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 35px;
+
+
+}
+.home-footer .home-about-us{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: -75px;
+
+}
+.home-footer .home-logos{
+    display: flex;
+    align-items: center;
+    /*justify-content: space-evenly;*/
+
+}
+.home-logos img{
+    padding: 8px}
+.home-get-help button{
+    background-color: black;
+    color: grey;
+    font-size: 14px;
+    border: none;
+
+}
+.home-get-help button:hover {
+    color: white; /* Change to the desired color on hover */
+}
+.home-get-help span{
+    font-size: 13px;
+    margin-top: 15px;
+    color: lightgrey;
+    /*padding-bottom: -50px;*/
+    /*margin-bottom: -60px;*/
+
+
+}
+
+.home-about-us button{
+    background-color: black;
+    color: grey;
+    font-size: 14px;
+    border: none;
+
+}
+.home-about-us button:hover {
+    color: white; /* Change to the desired color on hover */
+}
+.home-about-us h1{
+    color: white;
+    font-size: 15px;
+}
+.home-get-help h1{
+    color: white;
+    font-size: 15px;
+}
+
+
+.home-logos span{
+    font-size: 16px;
+    color: lightgrey;
+
+
+}
+
+.home-logos img{
+    cursor: pointer;
+}
+
+.home-body {
+    height: 380vh;
+    background-color: lightgray;
+}
+
+.home-dash1{
+    height: 185vh;
+    display: flex;
+    background-color: lightgrey;
+    flex-wrap: wrap;;
+    gap: 10px;
+}
+
+.home-dash2{
+    height: 180vh;
+    background-color: lightgrey;
+    display: flex;
+    flex-wrap: wrap;;
+    gap: 10px;
+}
+.home-img-dash1 {
+    width: 94vw;
+    height: 80vh;
+    background-color:lightgrey;
+
+
+}
+.home-img-dash1 img {
+    padding-left: 5%;
+    padding-top: 20px;
+    width: 90%;
+    height: 80vh;
+}
+.home-img-dash2 {
+    width: 95%;
+    height: 80vh;
+
+}
+.home-img-dash2 img {
+    padding-left: 5%;
+    padding-top: 20px;
+    width: 94vw;
+    height: 78vh;
+}
+.home-product-dash1{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    padding-left: 15px;
+    padding-top: 20px;
+    margin-left: 70px;
+    width: 89.5vw;
+    height: 100vh;
+    border: 1px solid black;
+}
+.home-product-dash2{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    padding-left: 15px;
+    padding-top: 20px;
+    margin-left: 70px;
+    width: 89.5vw;
+    height: 110vh;
+    border: 1px solid black;
+}
+
+.home-btn_before button{
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease; /* Add a smooth transition effect */
+}
+/* Change the border color when the button is hovered */
+.home-btn_before button:hover {
+    border-bottom-color: black; /* Change to your desired border color */
+}
+.home-btn-wrapper button{
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease; /* Add a smooth transition effect */
+}
+/* Change the border color when the button is hovered */
+.home-btn-wrapper button:hover {
+    border-bottom-color: black; /* Change to your desired border color */
+}
+.item-section{
+    background-color: white;
+    row-gap: 2px;
+    width: 14vw;
+    height: 45vh;
+    cursor: pointer;
+
+
+}
+.item-section .item-image{
+    width: 14vw;
+}
+.item-section .item-image img{
+    width: 14vw;
+    height: 30vh;
+}
+.item-section p{
+    margin: 2px;
+
+}
+.item-info{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.item-info p{
+    color: black;
+    font-weight: 500;
+}
+.item--desc-detail p{
+    color: black;
+    font-weight: 700;
+
+}
+.item-quantity p{
+    color: black;
+}
+.item-desc{
+    display: flex;
+    column-gap: 70px;
+}
+.item-section:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a box shadow on hover */
+}
+.product-not-found-message p{
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+.brand-list {
+    position: absolute;
+    top: 80%;
+    left: 140px;
+    width: 80px; /* Adjust the width as needed */
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.brand-item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+
+.brand-item:last-child {
+    border-bottom: none;
+}
+.custom-dropdown {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    z-index: 100;
+}
+
+.custom-dropdown.show {
+    max-height: 300px; /* Set the maximum height you desire */
+}
+
+.home-btn-cat button {
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.home-btn-cat button:hover {
+    border-bottom-color: black;
+}
+
+.home-btn_cat {
+    display: flex;
+    align-items: center;
+}
+
+.home-btn_cat button {
+    background-color: white;
+    color: white;
+    padding: 15px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    font-size: 18px;
+    height: 60px;
+    margin-left: 10px;
+}
+
+.home-btn-cat button:hover {
+    border-bottom-color: black;
+}
+
+.home-categories-dropdown {
+    position: relative;
+}
+
+.custom-dropdown-category {
+    width: 150px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-dropdown-category.show {
+    max-height: 300px;
+}
+
+.category-item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+
+.category-item:last-child {
+    border-bottom: none;
+}

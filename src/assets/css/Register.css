@@ -1,0 +1,121 @@
+.register-container {
+    height: 100vh; /* Adjust the height as needed */
+    width: 100vw; /* Adjust the width as needed */
+    background-image: url("images/log.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    /*background-attachment: fixed;*/
+    background-size: cover;
+
+}
+.r-Signup-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+    align-items: center;
+    height: 70%;
+    width: 29%;
+    background-color: rgba(255, 255, 255, 0.1); /* 0.7 is the alpha channel, adjust as needed */
+    border: 2px solid black;
+    border-radius: 40px;
+}
+.r-Head {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    row-gap: 30px;
+    margin-top: -30px;
+    /*align-content: flex-start;*/
+
+    height: 20%; /* Adjust the height of the container */
+
+    /*margin-bottom: 500px!* Set a background color to visualize the container *!*/
+}
+
+.r-Head img {
+    height:130%; /* Adjust the height of the image */
+    width: auto; /* Let the width adjust automatically to maintain the aspect ratio */
+}
+.r-Head h1 {
+    height: auto;
+    width: auto;
+    font-size: 33px;
+    margin-top: -70px;
+    font-weight: bold;
+    color: white;
+}
+.r-Body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.r-Body input{
+
+    background: transparent;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 40px;
+    font-size:15px ;
+    color: black;
+    height: 45px;
+    width: 350px;
+    text-indent: 10px;
+
+
+}
+
+.r-Body input::placeholder{
+    color: black;
+}
+.r-checkbox label{
+    color: black;
+    font-size: 16px;
+}
+.r-Footer{
+    display: flex;
+    /*column-gap: 30px;*/
+    row-gap: 10px;
+    flex-direction: column;
+}
+.r-button{
+    display: flex;
+    column-gap: 40px;
+    justify-content: center;
+    align-items: center;
+
+}
+.r-button button{
+    width: 120px;
+    /*height: 100%;*/
+    background-color: black;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+
+
+
+
+}
+.r-button button:hover {
+    background-color: grey; /* Change to your desired hover color */
+}
+.r-checkbox{
+    margin-left: 27px;
+
+}
+@media screen and (max-width: 600px) {
+    .r-Signup-form {
+        width: 90%;
+        max-width: none;
+    }
+}

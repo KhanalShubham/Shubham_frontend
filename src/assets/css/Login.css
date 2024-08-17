@@ -1,0 +1,132 @@
+.login-container {
+    height: 100vh; /* Adjust the height as needed */
+    width: 100vw; /* Adjust the width as needed */
+    background-image: url("images/log.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-logo{
+    height:100%; /* Adjust the height of the image */
+    width: auto; /* Let the width adjust automatically to maintain the aspect ratio */
+
+}
+.login-logo img{
+    height: 130px;
+    width: 130px;
+}
+.login-text h1{
+    height: auto;
+    width: auto;
+    font-size: 33px;
+    margin-top: -40px;
+    font-weight: bold;
+    color: white;
+
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60%;
+    width: 29%;
+    background-color: rgba(255, 255, 255, 0.1); /* 0.7 is the alpha channel, adjust as needed */
+    border: 2px solid black;
+    border-radius: 40px;
+
+}
+
+
+.login-body{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 27%;
+    row-gap: 15px;
+}
+
+.login-body input{
+    width: 370px;
+    height:140px ;
+    background: transparent;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 40px;
+    font-size:16px ;
+    color: black;
+}
+.login-body input::placeholder{
+    color: black;
+}
+
+.login-body input:hover {
+    border-color:black; /* Change the border color when the input is focused or hovered */
+
+}
+.login-forgot{
+    display: flex;
+    column-gap: 80px;
+
+}
+.login-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 27px;
+}
+.login-forgot a{
+    color: white;
+}
+.login-forgot a:hover {
+    color: black; /* Change color on hover */
+}
+.login-forgot label{
+    color: white;
+}
+.login-btn button{
+    width: 367px;
+    height:55px ;
+    background:black;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+
+}
+.login-btn button:hover {
+    background-color: grey; /* Change to your desired hover color */
+}
+.login-link a {
+    color:white;
+
+}
+.login-link label{
+    color: white;
+}
+.login-link a:hover {
+    color:black;
+}
+
+
+
+
+
+
+
+
+
+

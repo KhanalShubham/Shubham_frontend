@@ -1,0 +1,319 @@
+.ep-container{background: white;height:100%; width:100vw;overflow-x: hidden;}
+
+
+.ep-container .ep-header{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: sticky;
+    top: 0;
+    height:10%;
+    background: white;
+
+
+}
+.ep-logo img {
+    width:130px; /* Set the desired width of the logo */
+    height: 120px; /* Maintain aspect ratio */
+    margin-top: -17px; /* Add top margin for spacing, adjust as needed */
+
+}
+
+.ep-searchbar {
+    flex-grow: 1; /* Allow the search bar to take up remaining space */
+    margin-left: 15px;
+    /* Adjust the left margin for spacing, change as needed */
+}
+
+
+.ep-searchbar input {
+    width: 100%; /* Take up 100% of the available width within .searchbar */
+    padding: 10px; /* Add padding for better visual appearance, adjust as needed */
+    box-sizing: border-box;
+    margin-top: 14px;
+    background-color: white; /* Include padding in the width calculation */
+    color: black;
+    border-radius:40px ;
+    font-size: 16px;
+    border: 2px solid black;
+    outline: none;
+
+}
+
+.ep-searchbar input::placeholder {
+    color: black; /* Change the color of the placeholder text */
+    font-size: 16px; /* Adjust the font size of the placeholder text */
+}
+
+.ep-btn-wrapper button {
+    margin-left: 10px;
+    background-color:white;
+    color: black;
+    padding: 25px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    font-size: 18px;
+    height: 60px;
+
+}
+.ep-search_button button{
+    margin-left:-43px;
+    margin-top: 23px;
+    background-color:white;
+    color: black;
+    cursor: pointer;
+    padding:5px;
+    border: none;
+
+}
+.ep-search_button i {
+    font-size: 20px; /* Adjust the font size of the icon */
+    margin-right: 5px;}/* Add spacing between the icon and text */
+.ep-btn-wrapper button i {
+    font-size: 20px; /* Adjust the font size of the icon */
+    margin-right: 5px; /* Add spacing between the icon and text */
+}
+.ep-btn_before button {
+    margin-left: 10px;
+    background-color:white;
+    color: black;
+    padding: 25px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    font-size: 18px;
+    height: 60px;
+
+}
+.ep-btn_before button i {
+    font-size: 20px; /* Adjust the font size of the icon */
+    margin-right: 5px;}/* Add spacing between the icon and text */
+.ep-container .ep-footer{
+
+
+    display: flex;
+    height:40% ;
+    background: black;
+    /*margin-top: 20px;*/
+    font-size: 5px;
+    /*align-items: flex-end;*/
+    justify-content: space-around;
+
+}
+.ep-footer .ep-get-help{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 35px;
+
+
+}
+.ep-footer .ep-about-us{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: -75px;
+
+}
+.ep-footer .ep-logos{
+    display: flex;
+    align-items: center;
+    /*justify-content: space-evenly;*/
+
+}
+.ep-logos img{
+    padding: 8px}
+.ep-get-help button{
+    background-color: black;
+    color: grey;
+    font-size: 14px;
+    border: none;
+
+}
+.ep-get-help button:hover {
+    color: white; /* Change to the desired color on hover */
+}
+.ep-get-help span{
+    font-size: 13px;
+    margin-top: 15px;
+    color: lightgrey;
+    /*padding-bottom: -50px;*/
+    /*margin-bottom: -60px;*/
+
+
+}
+.ep-about-us button{
+    background-color: black;
+    color: grey;
+    font-size: 14px;
+    border: none;
+
+}
+.ep-profile-first button{
+    font-size: 19px;
+}
+.ep-about-us button:hover {
+    color: white; /* Change to the desired color on hover */
+}
+
+
+.ep-logos span{
+    font-size: 16px;
+    color: lightgrey;
+
+}
+
+.ep-logos img{
+    cursor: pointer;
+}
+
+.ep-body {
+    display: flex;
+
+    height: 100%;
+    background-color: lightgrey;
+
+}
+
+.ep-body .ep-profile-first{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;;
+    align-items: center;
+    width: 20%;
+    /*background-color: red;*/
+    height: 50%;
+}
+.ep-profile-first h2{
+    font-size: 20px;
+    color: black;
+
+
+}
+.ep-my-orders h2{
+    font-size: 20px;
+    color: black;
+}
+.ep-my-orders{
+    display: flex;
+    flex-direction: column;
+}
+.ep-manage-my-account{
+    display: flex;
+    flex-direction: column;
+}
+.ep-manage-my-account button{
+    border: none;
+    background-color: lightgrey;
+    color: black;
+}
+.ep-my-orders button{
+    border: none;
+    background-color: lightgrey;
+    color: black;
+}
+.ep-section2 {
+    padding: 50px;
+    height: 70%;
+    width: 70vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50%;
+    justify-content: center;
+
+}
+.ep-my-orders h2{
+    margin-right: 90px;
+}
+.ep-section1 h3{
+    color: black;
+    font-size: 20px;
+}
+.ep-info .ep-part1 label{
+    font-size: 20px;
+    color: black;
+
+}
+.ep-info .ep-part2 label{
+    font-size: 20px;
+    color: black;
+
+}
+.ep-info .ep-part1{
+    display: flex;
+
+}
+
+.ep-info .ep-part1 input{
+    font-size: 23px;
+    color: black;
+    height: 80%;
+
+
+    background-color: white;
+
+
+
+
+}
+.ep-info .ep-part2 input{
+    font-size: 23px;
+    color: black;
+    background-color: white;
+
+
+}
+.ep-info{
+    display: flex;
+    row-gap: 50px;
+    flex-direction: column;
+    justify-content: center;
+
+
+}
+.ep-buttons{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 20%;
+    height: 10%;
+
+}
+.ep-buttons button{
+    font-size: 17px;
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+.ep-buttons button:hover {
+    background-color: lightgrey; /* Change to your desired hover color */
+}
+.ep-about-us h1{
+    color: white;
+    font-size: 15px;
+}
+.ep-get-help h1{
+    color: white;
+    font-size: 15px;
+}
+.ep-btn_before button{
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease; /* Add a smooth transition effect */
+}
+/* Change the border color when the button is hovered */
+.ep-btn_before button:hover {
+    border-bottom-color: black; /* Change to your desired border color */
+}
+.ep-btn-wrapper button{
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease; /* Add a smooth transition effect */
+}
+/* Change the border color when the button is hovered */
+.ep-btn-wrapper button:hover {
+    border-bottom-color: black; /* Change to your desired border color */
+}

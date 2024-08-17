@@ -1,0 +1,293 @@
+.mo-container{background: white;height:100%; width:100vw;overflow-x: hidden;}
+
+
+
+.mo-container .mo-header{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: sticky;
+    top: 0;
+    height:10%;
+    background: white;
+
+
+}
+.mo-logo img {
+    width:130px; /* Set the desired width of the logo */
+    height: 120px; /* Maintain aspect ratio */
+    margin-top: -17px; /* Add top margin for spacing, adjust as needed */
+
+}
+
+.mo-searchbar {
+    flex-grow: 1; /* Allow the search bar to take up remaining space */
+    margin-left: 15px;
+    /* Adjust the left margin for spacing, change as needed */
+}
+
+
+.mo-searchbar input {
+    width: 100%; /* Take up 100% of the available width within .searchbar */
+    padding: 10px; /* Add padding for better visual appearance, adjust as needed */
+    box-sizing: border-box;
+    margin-top: 14px;
+    background-color: white; /* Include padding in the width calculation */
+    color: black;
+    border-radius:40px ;
+    font-size: 16px;
+    border: 2px solid black;
+    outline: none;
+
+}
+
+.mo-searchbar input::placeholder {
+    color: black; /* Change the color of the placeholder text */
+    font-size: 16px; /* Adjust the font size of the placeholder text */
+}
+
+.mo-btn-wrapper button {
+    margin-left: 10px;
+    background-color:white;
+    color: black;
+    padding: 25px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    font-size: 18px;
+    height: 60px;
+
+}
+.mo-search_button button{
+    margin-left:-43px;
+    margin-top: 23px;
+    background-color:white;
+    color: black;
+    cursor: pointer;
+    padding:5px;
+    border: none;
+
+}
+.mo-search_button i {
+    font-size: 20px; /* Adjust the font size of the icon */
+    margin-right: 5px;}/* Add spacing between the icon and text */
+.mo-btn-wrapper button i {
+    font-size: 20px; /* Adjust the font size of the icon */
+    margin-right: 5px; /* Add spacing between the icon and text */
+}
+.mo-btn_before button {
+    margin-left: 10px;
+    background-color:white;
+    color: black;
+    padding: 25px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    font-size: 18px;
+    height: 60px;
+
+}
+.mo-btn_before button i {
+    font-size: 20px; /* Adjust the font size of the icon */
+    margin-right: 5px;}/* Add spacing between the icon and text */
+.mo-container .mo-footer{
+
+
+    display: flex;
+    height:40% ;
+    background: black;
+    /*margin-top: 20px;*/
+    font-size: 5px;
+    /*align-items: flex-end;*/
+    justify-content: space-around;
+
+}
+.mo-footer .mo-get-help{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 35px;
+
+
+}
+.mo-footer .mo-about-us{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: -75px;
+
+}
+.mo-footer .mo-logos{
+    display: flex;
+    align-items: center;
+    /*justify-content: space-evenly;*/
+
+}
+.mo-logos img{
+    padding: 8px}
+.mo-get-help button{
+    background-color: black;
+    color: grey;
+    font-size: 14px;
+    border: none;
+
+}
+.mo-get-help button:hover {
+    color: white; /* Change to the desired color on hover */
+}
+.mo-get-help span{
+    font-size: 13px;
+    margin-top: 15px;
+    color: lightgrey;
+    /*padding-bottom: -50px;*/
+    /*margin-bottom: -60px;*/
+
+
+}
+.mo-about-us button{
+    background-color: black;
+    color: grey;
+    font-size: 14px;
+    border: none;
+
+}
+.mo-about-us button:hover {
+    color: white; /* Change to the desired color on hover */
+}
+
+
+.mo-logos span{
+    font-size: 16px;
+    color: lightgrey;
+
+}
+
+.mo-logos img{
+    cursor: pointer;
+}
+
+.mo-body {
+    display: flex;
+
+    height: 200vh;
+    background-color: lightgrey;
+
+}
+
+.mo-body .mo-profile-first{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin-left: 35px;
+    margin-top: 50px;
+    height: 50%;
+    width: 220px;
+}
+.mo-profile-first h2{
+    font-size: 20px;
+    color: black;
+}
+.mo-profile-first button{
+    font-size: 19px;
+}
+.mo-my-orders h2{
+    font-size: 20px;
+    color: black;
+}
+.mo-my-orders h2{
+    margin-right: 90px;
+}
+.mo-my-orders{
+    display: flex;
+    flex-direction: column;
+}
+.mo-manage-my-account{
+    display: flex;
+    flex-direction: column;
+}
+.mo-manage-my-account button{
+    border: none;
+    background-color: lightgrey;
+    font-size: 18px;
+    color: black;
+}
+.mo-my-orders button{
+    border: none;
+    background-color: lightgrey;
+    font-size: 18px;
+    color: black;
+}
+.mo-section2 {
+    padding: 50px;
+    height: 65%;
+    width: 70vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30%;
+    justify-content: center;
+    align-items: center;
+
+}
+.mo-section2 label{
+    color: black;
+    font-size: 25px;
+}
+.mo-section1 h3{
+    color: black;
+    font-size: 20px;
+}
+.mo-about-us h1{
+    color: white;
+    font-size: 15px;
+}
+.mo-get-help h1{
+    color: white;
+    font-size: 15px;
+}
+.mo-btn_before button{
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease; /* Add a smooth transition effect */
+}
+/* Change the border color when the button is hovered */
+.mo-btn_before button:hover {
+    border-bottom-color: black; /* Change to your desired border color */
+}
+.mo-btn-wrapper button{
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease; /* Add a smooth transition effect */
+}
+/* Change the border color when the button is hovered */
+.mo-btn-wrapper button:hover {
+    border-bottom-color: black; /* Change to your desired border color */
+}
+.order-table{
+    background-color: white;
+    height: 180vh;
+    width: 81vw;
+}
+
+.order-table table{
+    margin-bottom:10px;
+    width: 100%;
+}
+
+
+.order-table th{
+    /*padding: 10px; !* Add padding to cells for better readability *!*/
+    border: 2px solid black; /* Add borders to cells for better visibility */
+}
+.order-table td{
+    /*padding: 10px; !* Add padding to cells for better readability *!*/
+    border: 2px solid black; /* Add borders to cells for better visibility */
+    color: black;
+    font-size: 16px;
+}
+
+
+
+
+

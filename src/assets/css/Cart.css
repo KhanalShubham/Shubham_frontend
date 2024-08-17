@@ -1,0 +1,308 @@
+.c-container{background: white;height:100%; width:100vw;overflow-x: hidden;}
+
+.c-container .c-header{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: sticky;
+    top: 0;
+    height:10%;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+
+}
+.c-logo img {
+    width:130px; /* Set the desired width of the logo */
+    height: 120px; /* Maintain aspect ratio */
+    margin-top: -17px; /* Add top margin for spacing, adjust as needed */
+
+}
+
+.c-searchbar {
+    flex-grow: 1; /* Allow the search bar to take up remaining space */
+    margin-left: 15px;
+    /* Adjust the left margin for spacing, change as needed */
+}
+
+
+.c-searchbar input {
+    width: 100%; /* Take up 100% of the available width within .searchbar */
+    padding: 10px; /* Add padding for better visual appearance, adjust as needed */
+    box-sizing: border-box;
+    margin-top: 14px;
+    background-color: white; /* Include padding in the width calculation */
+    color: black;
+    border-radius:40px ;
+    font-size: 16px;
+    border: 2px solid black;
+    outline: none;
+
+}
+
+.c-searchbar input::placeholder {
+    color: black; /* Change the color of the placeholder text */
+    font-size: 16px; /* Adjust the font size of the placeholder text */
+}
+
+.c-btn-wrapper button {
+    margin-left: 10px;
+    background-color: white;;
+    color: black;
+    padding: 25px 10px;
+    cursor: pointer;
+    border: none;
+    /*border-radius: 4px;*/
+    font-size: 18px;
+    height: 60px;
+    border-radius: 0;
+
+}
+
+.c-search_button button{
+    margin-left:-43px;
+    margin-top: 23px;
+    background-color:white;
+    color: black;
+    cursor: pointer;
+    padding:5px;
+    border: none;
+
+
+
+}
+
+.c-search_button i {
+    font-size: 20px; /* Adjust the font size of the icon */
+    margin-right: 5px;}/* Add spacing between the icon and text */
+.c-btn-wrapper button i {
+    font-size: 20px; /* Adjust the font size of the icon */
+    margin-right: 5px; /* Add spacing between the icon and text */
+}
+.c-btn_before button {
+    margin-left: 10px;
+    background-color:white;
+    color: black;
+    padding: 25px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    font-size: 18px;
+    height: 60px;
+
+}
+
+.c-btn_before button{
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease; /* Add a smooth transition effect */
+}
+/* Change the border color when the button is hovered */
+.c-btn_before button:hover {
+    border-bottom-color: black; /* Change to your desired border color */
+}
+.c-btn-wrapper button{
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease; /* Add a smooth transition effect */
+}
+/* Change the border color when the button is hovered */
+.c-btn-wrapper button:hover {
+    border-bottom-color: black; /* Change to your desired border color */
+}
+
+/*.au-btn_before button i {*/
+/*    font-size: 20px; !* Adjust the font size of the icon *!*/
+/*    margin-right: 5px;}!* Add spacing between the icon and text *!*/
+.c-container .c-footer{
+    display: flex;
+    height:41% ;
+    background: black;
+    /*margin-top: 20px;*/
+    font-size: 5px;
+    /*align-items: flex-end;*/
+    justify-content: space-around;
+
+}
+.c-footer .c-get-help{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 35px;
+
+
+}
+.c-footer .c-about-us{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: -75px;
+
+}
+.c-footer .c-logos{
+    display: flex;
+    align-items: center;
+    /*justify-content: space-evenly;*/
+
+}
+.c-logos img{
+    padding: 8px}
+.c-get-help button{
+    background-color: black;
+    color: grey;
+    font-size: 14px;
+    border: none;
+
+}
+.c-get-help button:hover {
+    color: white; /* Change to the desired color on hover */
+}
+.c-get-help span{
+    font-size: 13px;
+    margin-top: 15px;
+    color: lightgrey;
+    /*padding-bottom: -50px;*/
+    /*margin-bottom: -60px;*/
+
+
+}
+.c-about-us button{
+    background-color: black;
+    color: grey;
+    font-size: 14px;
+    border: none;
+
+}
+.c-about-us button:hover {
+    color: white; /* Change to the desired color on hover */
+}
+
+
+.c-logos span{
+    font-size: 16px;
+    color: lightgrey;
+
+}
+
+.c-logos img{
+    cursor: pointer;
+}
+
+
+
+.c-about-us h1{
+    color: white;
+    font-size: 15px;
+}
+.c-get-help h1{
+    color: white;
+    font-size: 15px;
+}
+
+.c-body {
+    height: 150vh;
+    padding: 30px;
+    background-color: white;
+    color: black;
+}
+.c-title h2{
+    font-size: 19px;
+    margin-left: 80px;
+
+}
+.c-container{
+    background-color: white;
+}
+.c-table table{
+    margin-left: 80px;
+    width: 90vw;
+}
+.c-table img{
+    height: 100%;
+    margin-left: 28px;
+
+}
+
+.c-table th{
+    border: 2px solid black; /* Add borders to cells for better visibility */
+    width: 70px;
+
+}
+.c-table tr{
+    border: 2px solid black; /* Add borders to cells for better visibility */
+    width: 5vw;
+}
+.c-table td{
+    color: black;
+    font-size: 19px;
+    height: 15vh;
+    max-width: 5vw;
+    border: 2px solid black; /* Add borders to cells for better visibility */
+}
+td button.c-delete {
+    background-color: red;
+    margin-left: 45px;
+}
+.bill th {
+    padding-right: 60px; /* Adjust the value to your preference */
+}
+.bill tr {
+    height: 40px; /* Adjust the value to your preference */
+}
+.bill {
+    font-size: 17px;
+    margin-left: 75%;
+}
+.highlighted-row {
+    border-top: 1px solid black;
+}
+.proceed button{
+
+    font-size: 15px;
+}
+.no-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin-left: 80px;
+    margin-top: 20px;
+
+}
+.no-item p{
+    font-size: 18px;
+    margin-top: 20px;
+
+}
+.no-item button{
+    cursor: pointer;
+    border: 0;
+}
+.main{
+    display: flex;
+    cursor: pointer;
+}
+.select{
+    font-size: 19px;
+}
+.Bill h1{
+    font-size: 22px;
+}
+.Bill{
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+}
+
+
+
+
+

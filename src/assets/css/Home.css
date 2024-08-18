@@ -72,8 +72,8 @@
 /* Adjust the styling for other buttons as needed */
 
 .home-logo img {
-    width:130px; /* Set the desired width of the logo */
-    height: 120px; /* Maintain aspect ratio */
+    width:100px; /* Set the desired width of the logo */
+    height: 80px; /* Maintain aspect ratio */
     margin-top: -17px; /* Add top margin for spacing, adjust as needed */
 
 }
@@ -206,7 +206,8 @@
 
 }
 .home-logos img{
-    padding: 8px}
+    padding: 8px
+}
 .home-get-help button{
     background-color: black;
     color: grey;

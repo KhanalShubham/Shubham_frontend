@@ -48,34 +48,6 @@ function Home() {
         refetch();
     };
 
-    // const [selectedBrand, setSelectedBrand] = useState("");
-    // const [addedBrands, setAddedBrands] = useState({data: []});
-    //
-    // const {data: productsByBrand, refetch: refetchProductsByBrand} = useQuery({
-    //     queryKey: ["GET_PRODUCTS_BY_BRAND", brandName],
-    //     queryFn: () => {
-    //         return axios.get(`http://localhost:8082/item/getItemsByBrandName/${brandName}`);
-    //     },
-    //     enabled: false,
-    // });
-    //
-    //
-    // const handleBrandSelection = (brandName) => {
-    //     if (brandName === "") {
-    //         setAddedBrands({data: []});
-    //         setSelectedBrand("");
-    //     } else {
-    //         setSelectedBrand(brandName);
-    //         refetchProductsByBrand();
-    //         navigate(`/brands/${brandName}`, {state: {brandName}});
-    //     }
-    // };
-    //
-    //
-    // const [isBrandDropdownOpen, setIsBrandDropdownOpen] = useState(false);
-    // const toggleBrandDropdown = () => {
-    //     setIsBrandDropdownOpen((prev) => !prev);
-    // }
 
     const [selectedCategory, setSelectedCategory] = useState("");
     const [addedCategories, setAddedCategories] = useState({ data: [] });
@@ -110,7 +82,7 @@ function Home() {
             <div className={"home-header"}>
                 <div className={"home-logo"}>
                     <a href="/dashboard">
-                        <img width={100} src={"images/logo.png"} alt="Logo"/>
+                        <img src="images/logo" alt="Logo" style={{ width: '40px', height: '40px' }} />
                     </a>
                 </div>
                 {/*<div className={"home-btn_before"}>*/}

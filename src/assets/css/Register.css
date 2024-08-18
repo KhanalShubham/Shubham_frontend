@@ -1,121 +1,97 @@
+/* Signup Container */
 .register-container {
-    height: 100vh; /* Adjust the height as needed */
-    width: 100vw; /* Adjust the width as needed */
-    background-image: url("images/log.jpg");
+    height: 100vh;
+    width: 100vw;
+    background-image: url("images/signup-background.jpg");
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-
-
-    /*background-attachment: fixed;*/
-    background-size: cover;
-
+    background-position: bottom right;
+    overflow: hidden;
+    position: relative;
 }
+
+/* Add a gradient overlay to the background */
+.register-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.7), rgba(0, 0, 0, 0.1));
+    z-index: 1;
+}
+
+/* Signup Form */
 .r-Signup-form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    row-gap: 20px;
     align-items: center;
-    height: 70%;
-    width: 29%;
-    background-color: rgba(255, 255, 255, 0.1); /* 0.7 is the alpha channel, adjust as needed */
-    border: 2px solid black;
-    border-radius: 40px;
-}
-.r-Head {
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items:center;
-    row-gap: 30px;
-    margin-top: -30px;
-    /*align-content: flex-start;*/
-
-    height: 20%; /* Adjust the height of the container */
-
-    /*margin-bottom: 500px!* Set a background color to visualize the container *!*/
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 3px solid #007bff;
+    border-radius: 30px;
+    z-index: 2;
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.5);
+    width: 400px;
 }
 
+/* Signup Logo */
 .r-Head img {
-    height:130%; /* Adjust the height of the image */
-    width: auto; /* Let the width adjust automatically to maintain the aspect ratio */
+    height: 80px;
+    width: 80px;
+    margin-bottom: 15px;
+    filter: hue-rotate(180deg) drop-shadow(2px 4px 6px black);
 }
+
+/* Signup Text */
 .r-Head h1 {
-    height: auto;
-    width: auto;
-    font-size: 33px;
-    margin-top: -70px;
-    font-weight: bold;
-    color: white;
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 15px;
 }
-.r-Body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    row-gap: 10px;
-}
-.r-Body input{
 
-    background: transparent;
-    outline: none;
-    border: 2px solid black;
-    border-radius: 40px;
-    font-size:15px ;
-    color: black;
+/* Input Fields */
+.r-Body input {
+    width: 320px;
     height: 45px;
-    width: 350px;
-    text-indent: 10px;
-
-
-}
-
-.r-Body input::placeholder{
-    color: black;
-}
-.r-checkbox label{
-    color: black;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 10px;
     font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease-in-out;
 }
-.r-Footer{
-    display: flex;
-    /*column-gap: 30px;*/
-    row-gap: 10px;
-    flex-direction: column;
-}
-.r-button{
-    display: flex;
-    column-gap: 40px;
-    justify-content: center;
-    align-items: center;
 
+.r-Body input:hover,
+.r-Body input:focus {
+    border-color: #ff5722;
+    box-shadow: 0 0 10px rgba(255, 87, 34, 0.5);
 }
-.r-button button{
-    width: 120px;
-    /*height: 100%;*/
-    background-color: black;
+
+/* Signup Button */
+.r-button button {
+    width: 150px;
+    height: 50px;
+    background: linear-gradient(135deg, #ff5722, #ff3d00);
     border: none;
-    outline: none;
-    border-radius: 40px;
+    border-radius: 20px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 18px;
     color: white;
-
-
-
-
+    font-weight: 600;
+    transition: background 0.3s ease-in-out;
 }
+
 .r-button button:hover {
-    background-color: grey; /* Change to your desired hover color */
+    background: linear-gradient(135deg, #ff3d00, #ff5722);
 }
-.r-checkbox{
-    margin-left: 27px;
 
-}
-@media screen and (max-width: 600px) {
-    .r-Signup-form {
-        width: 90%;
-        max-width: none;
-    }
+/* Checkbox Label */
+.r-checkbox label {
+    color: #333;
+    font-size: 16px;
 }

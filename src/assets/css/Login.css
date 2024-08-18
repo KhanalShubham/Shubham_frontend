@@ -1,132 +1,102 @@
+/* Login Container */
 .login-container {
-    height: 100vh; /* Adjust the height as needed */
-    width: 100vw; /* Adjust the width as needed */
-    background-image: url("images/log.jpg");
+    height: 100vh;
+    width: 100vw;
+    background-image: url("images/login-background.jpg");
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    background-position: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.login-header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* Add a gradient overlay to the background */
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+    z-index: 1;
 }
-.login-logo{
-    height:100%; /* Adjust the height of the image */
-    width: auto; /* Let the width adjust automatically to maintain the aspect ratio */
 
-}
-.login-logo img{
-    height: 130px;
-    width: 130px;
-}
-.login-text h1{
-    height: auto;
-    width: auto;
-    font-size: 33px;
-    margin-top: -40px;
-    font-weight: bold;
-    color: white;
-
-}
+/* Login Form */
 .login-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 60%;
-    width: 29%;
-    background-color: rgba(255, 255, 255, 0.1); /* 0.7 is the alpha channel, adjust as needed */
-    border: 2px solid black;
-    border-radius: 40px;
-
-}
-
-
-.login-body{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    height: 27%;
-    row-gap: 15px;
-}
-
-.login-body input{
-    width: 370px;
-    height:140px ;
-    background: transparent;
-    outline: none;
-    border: 2px solid black;
-    border-radius: 40px;
-    font-size:16px ;
-    color: black;
-}
-.login-body input::placeholder{
-    color: black;
-}
-
-.login-body input:hover {
-    border-color:black; /* Change the border color when the input is focused or hovered */
-
-}
-.login-forgot{
-    display: flex;
-    column-gap: 80px;
-
-}
-.login-footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 27px;
-}
-.login-forgot a{
-    color: white;
-}
-.login-forgot a:hover {
-    color: black; /* Change color on hover */
-}
-.login-forgot label{
-    color: white;
-}
-.login-btn button{
-    width: 367px;
-    height:55px ;
-    background:black;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.85);
     border: none;
-    outline: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    border-radius: 20px;
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 350px;
+}
+
+/* Login Logo */
+.login-logo img {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 20px;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+/* Login Text */
+.login-text h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.login-body input {
+    width: 300px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-body input:hover,
+.login-body input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Login Button */
+.login-btn button {
+    width: 300px;
+    height: 50px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
     color: white;
     font-weight: 600;
-
+    transition: background 0.3s ease-in-out;
 }
+
 .login-btn button:hover {
-    background-color: grey; /* Change to your desired hover color */
-}
-.login-link a {
-    color:white;
-
-}
-.login-link label{
-    color: white;
-}
-.login-link a:hover {
-    color:black;
+    background: linear-gradient(135deg, #0056b3, #007bff);
 }
 
+/* Forgot Password */
+.login-forgot a {
+    color: #007bff;
+    text-decoration: none;
+}
 
-
-
-
-
-
-
-
-
+.login-forgot a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}

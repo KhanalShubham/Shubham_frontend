@@ -1,217 +1,263 @@
-.aa-container{
+/* Container Styles */
+.ab-container {
     display: flex;
     height: 100vh;
     width: 100vw;
-
-
 }
-.aa-buttons{
-    width: 17vw;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 
-
+/* Button Panel Styles */
+.ab-button-panel {
+    width: 18vw;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
 }
-.aa-btn{
+
+/* Button Styles */
+.ab-button-group {
     display: flex;
     flex-direction: column;
-    row-gap: 5px;
-    width: 16vw;
-    margin-left: 8px;
+    row-gap: 7px;
+    width: 17vw;
+    margin-left: 10px;
 }
-.aa-btn button{
+
+.ab-button-group button {
     text-align: left;
-    background-color: white;
-    color: black;
+    background-color: #f8f8f8;
+    color: #333;
 }
-.aa-btn button i{
-    margin-right: 10px;
+
+.ab-button-group button i {
+    margin-right: 12px;
 }
-.aa-top span{
-    font-size: 21px;
+
+/* Top Section Styles */
+.ab-top-section span {
+    font-size: 22px;
     font-weight: bold;
 }
-.aa-top i{
+
+.ab-top-section i {
+    font-size: 22px;
+    margin-left: 15px;
+}
+
+/* Button Hover Styles */
+.ab-button-group button:hover {
+    background-color: #e0e0e0;
+}
+
+.ab-button-group button.active {
+    background-color: #d0d0d0;
+}
+
+/* Display Section Styles */
+.ab-display-section {
+    margin: 12px;
+}
+
+.ab-display-section h2 {
     font-size: 21px;
-    margin-left: 13px;
-}
-/*.Pr-display{*/
-/*    background-color: lightgrey;*/
-/*    width: 100vw;*/
-/*}*/
-.aa-btn button.products:hover {
-    background-color: lightgray;
-
-
-}
-.aa-btn button.product{
-    background-color: lightgrey;
 }
 
-.aa-display{
-    margin: 10px;
+.ab-display-section h3 {
+    font-size: 18px;
 }
-.aa-display h2{
-    font-size: 20px;
-}
-.aa-display h3{
+
+/* Dropdown Button Styles */
+.at-dropdown-button {
+    background-color: #e0e0e0;
+    color: #fff;
+    padding: 18px;
     font-size: 17px;
-}
-.ap-dropbtn{
-    background-color: lightgrey;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
     border: none;
-    width: 99%;
-
+    width: 98%;
 }
 
-/*.dropdown {*/
-/*    position: relative;*/
-/*    display: inline-block;*/
-/*}*/
-.ap-dropdown i{
-    margin-left: 7px;
+/* Dropdown Icon Styles */
+.at-dropdown i {
+    margin-left: 8px;
 }
 
-
-
-/* Dropdown Content (Hidden by Default) */
-.ap-dropdown-content {
+/* Dropdown Content Styles */
+.at-dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 100px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: #f4f4f4;
+    min-width: 105px;
+    box-shadow: 0 10px 18px 0 rgba(0,0,0,0.3);
     z-index: 1;
-    border-radius: 10px;
-    margin-left: 113px;
+    border-radius: 12px;
+    margin-left: 120px;
 }
 
-/* Links inside the dropdown */
-.ap-dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+.at-dropdown-content a {
+    color: #444;
+    padding: 14px 18px;
     text-decoration: none;
     display: block;
 }
-button.ap-dropbtn{
-    height: 46%;
 
-
+button.at-dropdown-button {
+    height: 50%;
 }
 
-/* Change color of dropdown links on hover */
-.ap-dropdown-content a:hover {background-color: lightgrey;color: black}
+/* Dropdown Hover Styles */
+.at-dropdown-content a:hover {
+    background-color: #d0d0d0;
+    color: #222;
+}
 
-/* Show the dropdown menu on hover */
-.ap-dropdown:hover .ap-dropdown-content {display: block;}
+.at-dropdown:hover .at-dropdown-content {
+    display: block;
+}
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.ap-dropdown:hover .ap-dropbtn {background-color: lightgrey}
+.at-dropdown:hover .at-dropdown-button {
+    background-color: #c0c0c0;
+}
 
-.cgr-dropbtn{
-    background-color: lightgrey;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
+/* Category Dropdown Styles */
+.cg-dropdown-button {
+    background-color: #d0d0d0;
+    color: #fff;
+    padding: 18px;
+    font-size: 17px;
     border: none;
-    width: 99%;
+    width: 98%;
 }
-.cgr-dropdown i{
-    margin-left: 7px;
+
+.cg-dropdown i {
+    margin-left: 8px;
 }
-.cgr-dropdown-content {
+
+.cg-dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 100px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: #f4f4f4;
+    min-width: 105px;
+    box-shadow: 0 10px 18px 0 rgba(0,0,0,0.3);
     z-index: 1;
-    border-radius: 10px;
-    margin-left: 105px;
+    border-radius: 12px;
+    margin-left: 115px;
 }
-.cgr-dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+
+.cg-dropdown-content a {
+    color: #444;
+    padding: 14px 18px;
     text-decoration: none;
     display: block;
 }
-button.cgr-dropbtn{
-    height: 46%;
-}
-.cgr-dropdown-content a:hover {background-color: lightgrey;color: black}
-.cgr-dropdown:hover .cgr-dropdown-content {display: block;}
-.cgr-dropdown:hover .cgr-dropbtn {background-color: lightgrey}
 
-.brd-dropbtn{
-    background-color: lightgrey;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
+button.cg-dropdown-button {
+    height: 50%;
+}
+
+.cg-dropdown-content a:hover {
+    background-color: #d0d0d0;
+    color: #222;
+}
+
+.cg-dropdown:hover .cg-dropdown-content {
+    display: block;
+}
+
+.cg-dropdown:hover .cg-dropdown-button {
+    background-color: #c0c0c0;
+}
+
+/* Brand Dropdown Styles */
+.bd-dropdown-button {
+    background-color: #d0d0d0;
+    color: #fff;
+    padding: 18px;
+    font-size: 17px;
     border: none;
-    width: 99%;
+    width: 98%;
 }
-.brd-dropdown i{
-    margin-left: 7px;
+
+.bd-dropdown i {
+    margin-left: 8px;
 }
-.brd-dropdown-content {
+
+.bd-dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 100px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: #f4f4f4;
+    min-width: 105px;
+    box-shadow: 0 10px 18px 0 rgba(0,0,0,0.3);
     z-index: 1;
-    border-radius: 10px;
-    margin-left: 125px;
+    border-radius: 12px;
+    margin-left: 130px;
 }
-.brd-dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+
+.bd-dropdown-content a {
+    color: #444;
+    padding: 14px 18px;
     text-decoration: none;
     display: block;
 }
-button.brd-dropbtn{
-    height: 46%;
+
+button.bd-dropdown-button {
+    height: 50%;
 }
-.brd-dropdown-content a:hover {background-color: lightgrey;color: black}
-.brd-dropdown:hover .brd-dropdown-content {display: block;}
-.brd-dropdown:hover .brd-dropbtn {background-color: lightgrey}
 
+.bd-dropdown-content a:hover {
+    background-color: #d0d0d0;
+    color: #222;
+}
 
-.pr-dropbtn{
-    background-color: lightgrey;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
+.bd-dropdown:hover .bd-dropdown-content {
+    display: block;
+}
+
+.bd-dropdown:hover .bd-dropdown-button {
+    background-color: #c0c0c0;
+}
+
+/* Price Dropdown Styles */
+.pd-dropdown-button {
+    background-color: #d0d0d0;
+    color: #fff;
+    padding: 18px;
+    font-size: 17px;
     border: none;
-    width: 99%;
+    width: 98%;
 }
-.pr-dropdown i{
-    margin-left: 7px;
+
+.pd-dropdown i {
+    margin-left: 8px;
 }
-.pr-dropdown-content {
+
+.pd-dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 70px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: #f4f4f4;
+    min-width: 75px;
+    box-shadow: 0 10px 18px 0 rgba(0,0,0,0.3);
     z-index: 1;
-    border-radius: 10px;
-    margin-left: 85px;
+    border-radius: 12px;
+    margin-left: 90px;
 }
-.pr-dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+
+.pd-dropdown-content a {
+    color: #444;
+    padding: 14px 18px;
     text-decoration: none;
     display: block;
 }
-button.pr-dropbtn{
-    height: 46%;
+
+button.pd-dropdown-button {
+    height: 50%;
 }
-.pr-dropdown-content a:hover {background-color: lightgrey;color: black}
-.pr-dropdown:hover .pr-dropdown-content {display: block;}
-.pr-dropdown:hover .pr-dropbtn {background-color: lightgrey}
 
+.pd-dropdown-content a:hover {
+    background-color: #d0d0d0;
+    color: #222;
+}
 
+.pd-dropdown:hover .pd-dropdown-content {
+    display: block;
+}
 
+.pd-dropdown:hover .pd-dropdown-button {
+    background-color: #c0c0c0;
+}

@@ -6,111 +6,95 @@ import Carousel from "react-bootstrap/Carousel";
 import React, {useState} from "react";
 
 function Home() {
+    // Check if the user is logged in
     const isLoggedIn = !!localStorage.getItem("userId");
-    const navigate = useNavigate();
-    // const {brandName} = useParams();
-    const {categoryName} = useParams();
 
-    // Fetching all items
-    const {data} = useQuery({
+    // For navigation between pages
+    const navigate = useNavigate();
+
+    // Get the category name from the URL parameters
+    const { categoryName } = useParams();
+
+    // Fetching all items using React Query
+    const { data } = useQuery({
         queryKey: ["GET_ITEM_ALL"],
         queryFn() {
             return axios.get("http://localhost:8082/item/getAll");
         }
     });
 
-    // Fetching all brands
-    // const {data: brandData} = useQuery({
-    //     queryKey: ["GET_BRAND_ALL"],
-    //     queryFn() {
-    //         return axios.get("http://localhost:8082/brand/getAll");
-    //     }
-    // });
-
     // Fetching all categories
-    const {data: categoryData} = useQuery({
+    const { data: categoryData } = useQuery({
         queryKey: ["GET_CATEGORY_ALL"],
         queryFn() {
             return axios.get("http://localhost:8082/category/getAll");
         }
     });
 
+    // State to store search input
     const [searchData, setSearchData] = useState();
-    const {data: searchByName, refetch} = useQuery({
+
+    // Fetch search results when user searches by product name
+    const { data: searchByName, refetch } = useQuery({
         queryKey: ["SEARCHBYNAME"],
         queryFn: () => {
             return axios.get("http://localhost:8082/item/searchByName/" + searchData);
         },
-        enabled: false,
+        enabled: false, // Disable automatic fetching until the search is triggered
     });
 
+    // Handle search button click
     const handleSearch = () => {
-        refetch();
+        refetch(); // Trigger search query
     };
 
-
+    // State for handling category selection
     const [selectedCategory, setSelectedCategory] = useState("");
     const [addedCategories, setAddedCategories] = useState({ data: [] });
 
+    // Fetch products based on selected category
     const { data: productsByCategory, refetch: refetchProductsByCategory } = useQuery({
         queryKey: ["GET_PRODUCTS_BY_CATEGORY", selectedCategory],
         queryFn: () => {
             return axios.get(`http://localhost:8082/item/getItemsByCategoryName/${categoryName}`);
         },
-        enabled: false,
+        enabled: false, // Disable automatic fetching until a category is selected
     });
 
+    // Handle category selection from the dropdown
     const handleCategorySelection = (categoryName) => {
         if (categoryName === "") {
             setAddedCategories({ data: [] });
             setSelectedCategory("");
         } else {
             setSelectedCategory(categoryName);
-            refetchProductsByCategory();
+            refetchProductsByCategory(); // Fetch products by the selected category
             navigate(`/categories/${categoryName}`, { state: { categoryName } });
         }
     };
 
+    // State to manage category dropdown open/close
     const [isCategoryDropdownOpen, setIsCategoryDropdownOpen] = useState(false);
+
+    // Toggle the category dropdown
     const toggleCategoryDropdown = () => {
-        console.log("Toggling category dropdown");
         setIsCategoryDropdownOpen((prev) => !prev);
-    }
+    };
 
     return (
-        <div className={"home-container"}>
-            <div className={"home-header"}>
-                <div className={"home-logo"}>
+        <div className="home-container">
+            {/* Header Section */}
+            <div className="home-header">
+                {/* Logo */}
+                <div className="home-logo">
                     <a href="/dashboard">
                         <img src="images/logo" alt="Logo" style={{ width: '40px', height: '40px' }} />
                     </a>
                 </div>
-                {/*<div className={"home-btn_before"}>*/}
-                {/*    <div className={"home-brands-dropdown"}>*/}
-                {/*        <button onClick={toggleBrandDropdown}>Brands</button>*/}
-                {/*        {isBrandDropdownOpen && (*/}
-                {/*            <div className="custom-dropdown">*/}
-                {/*                {selectedBrand === "" && (*/}
-                {/*                    <div className="brand-list" onClick={(e) => e.stopPropagation()}>*/}
-                {/*                        {brandData?.data.map((brand) => (*/}
-                {/*                            <div*/}
-                {/*                                key={brand.id}*/}
-                {/*                                className="brand-item"*/}
-                {/*                                onClick={() => handleBrandSelection(brand.brandName)}*/}
-                {/*                            >*/}
-                {/*                                {brand.brandName}*/}
-                {/*                            </div>*/}
-                {/*                        ))}*/}
-                {/*                    </div>*/}
-                {/*                )}*/}
-                {/*            </div>*/}
-                {/*        )}*/}
-                {/*    </div>*/}
-                {/*</div>*/}
 
-
-                <div className={"home-btn-cat"}>
-                    <div className={"home-categories-dropdown"}>
+                {/* Categories Dropdown */}
+                <div className="home-btn-cat">
+                    <div className="home-categories-dropdown">
                         <button onClick={toggleCategoryDropdown}>Category</button>
                         {isCategoryDropdownOpen && (
                             <div className="custom-dropdown-category">
@@ -130,36 +114,26 @@ function Home() {
                     </div>
                 </div>
 
-                {/* Other buttons (Categories, About Us, and Contact Us) */}
-                {/*<div className={"home-btn_after"}>*/}
-                {/*    <Link to="/Contactus">*/}
-                {/*        <button>Contact Us</button>*/}
-                {/*    </Link>*/}
-                {/*    <Link to="/Aboutus">*/}
-                {/*        <button>About Us</button>*/}
-                {/*    </Link>*/}
-                {/*</div>*/}
-
-                <div className={"s-searchbar"}>
+                {/* Search Bar */}
+                <div className="s-searchbar">
                     <input
-                        type={"text"}
-                        placeholder={"Search Product"}
-                        onChange={(e) => {
-                            setSearchData(e.target.value);
-                        }}
+                        type="text"
+                        placeholder="Search Product"
+                        onChange={(e) => setSearchData(e.target.value)}
                     />
                 </div>
-                <div className={"s-search_button"}>
+                <div className="s-search_button">
                     <button type="submit" onClick={handleSearch}>
                         <i className="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </div>
 
-                <div className={"home-btn-wrapper"}>
-                    <Link to={"/cart"}>
+                {/* Buttons for Cart, Wishlist, Login, and Register */}
+                <div className="home-btn-wrapper">
+                    <Link to="/cart">
                         <button><i className="fa-solid fa-cart-shopping cart-icon"></i>Cart</button>
                     </Link>
-                    <Link to={"/wishlist"}>
+                    <Link to="/wishlist">
                         <button><i className="fa-regular fa-heart"></i>Wishlist</button>
                     </Link>
                     <Link to="/Login">
@@ -170,9 +144,13 @@ function Home() {
                     </Link>
                 </div>
             </div>
-            <div className={"home-body"}>
-                <div className={"home-dash1"}>
-                    <div className={"home-img-dash1"}>
+
+            {/* Body Section */}
+            <div className="home-body">
+                {/* Carousel and Product Listings */}
+                <div className="home-dash1">
+                    {/* Image Carousel */}
+                    <div className="home-img-dash1">
                         <Carousel>
                             <Carousel.Item interval={2000}>
                                 <img
@@ -197,199 +175,87 @@ function Home() {
                             </Carousel.Item>
                         </Carousel>
                     </div>
-                    <div className={"home-product-dash1"}>
+
+                    {/* Product Listings */}
+                    <div className="home-product-dash1">
+                        {/* Display search results if available */}
                         {searchData && searchByName?.data && searchByName.data.length > 0 ? (
                             searchByName.data.map((i) => (
-                                <div onClick={() => {
-                                    navigate("/products/" + i?.id)
-                                }} className={"item-section"} key={i.itemId}>
-                                    <div className={"item-image"}>
-                                        <img src={"data:image/png;base64, " + i?.itemImage} width={100}
-                                             alt={i?.itemName}/>
+                                <div onClick={() => navigate("/products/" + i?.id)} className="item-section" key={i.itemId}>
+                                    <div className="item-image">
+                                        <img src={"data:image/png;base64, " + i?.itemImage} width={100} alt={i?.itemName} />
                                     </div>
-
-                                    <div className={"item-info"}>
+                                    <div className="item-info">
                                         <p>{i?.itemName}</p>
                                         <p>{i?.itemDescription}</p>
                                     </div>
-                                    <div className={"item-desc"}>
-                                        <div className={"item--desc-detail"}>
+                                    <div className="item-desc">
+                                        <div className="item--desc-detail">
                                             <p>Rs.{i?.itemPerPrice}</p>
                                         </div>
-                                        <div className={"item-quantity"}>
+                                        <div className="item-quantity">
                                             <p>Stock:({i?.itemQuantity})</p>
                                         </div>
                                     </div>
                                 </div>
                             ))
                         ) : (
+                            // Display a message when no products are found
                             searchData ? (
-                                <div className={"product-not-found-message"}>
+                                <div className="product-not-found-message">
                                     <p>Product not found.</p>
                                 </div>
                             ) : (
+                                // Display all products
                                 data?.data.length > 0 ? (
                                     data?.data.slice(0, 12).map((i) => (
-                                        <div onClick={() => {
-                                            navigate("/products/" + i?.id)
-                                        }} className={"item-section"} key={i.itemId}>
-                                            <div className={"item-image"}>
-                                                <img src={"data:image/png;base64, " + i?.itemImage} width={100}
-                                                     alt={i?.itemName}/>
+                                        <div onClick={() => navigate("/products/" + i?.id)} className="item-section" key={i.itemId}>
+                                            <div className="item-image">
+                                                <img src={"data:image/png;base64, " + i?.itemImage} width={100} alt={i?.itemName} />
                                             </div>
-
-                                            <div className={"item-info"}>
+                                            <div className="item-info">
                                                 <p>{i?.itemName}</p>
                                                 <p>{i?.itemDescription}</p>
                                             </div>
-                                            <div className={"item-desc"}>
-                                                <div className={"item--desc-detail"}>
+                                            <div className="item-desc">
+                                                <div className="item--desc-detail">
                                                     <p>Rs.{i?.itemPerPrice}</p>
                                                 </div>
-                                                <div className={"item-quantity"}>
+                                                <div className="item-quantity">
                                                     <p>Stock:({i?.itemQuantity})</p>
                                                 </div>
                                             </div>
                                         </div>
                                     ))
                                 ) : (
-                                    <div className={"product-not-found-message"}>
+                                    <div className="product-not-found-message">
                                         {searchData && <p>Product not found.</p>}
                                     </div>
                                 )
                             )
                         )}
                     </div>
-
-
                 </div>
-                <div className={"home-dash2"}>
-                    <div className={"home-img-dash2"}>
+
+                {/* Additional Carousel and Products */}
+                <div className="home-dash2">
+                    <div className="home-img-dash2">
                         <Carousel fade>
                             <Carousel.Item interval={1000}>
-                                <img
-                                    className="d-block w-100"
-                                    src="images/99.png"
-                                    alt="First slide"
-                                />
-
+                                <img className="d-block w-100" src="images/99.png" alt="First slide" />
                             </Carousel.Item>
                             <Carousel.Item interval={1000}>
-                                <img
-                                    className="d-block w-100"
-                                    src="images/GGG.png"
-                                    alt="Second slide"
-                                />
-
+                                <img className="d-block w-100" src="images/GGG.png" alt="Second slide" />
                             </Carousel.Item>
                             <Carousel.Item interval={1000}>
-                                <img
-                                    className="d-block w-100"
-                                    src="images/00.png"
-                                    alt="Third slide"
-                                />
+                                <img className="d-block w-100" src="images/00.png" alt="Third slide" />
                             </Carousel.Item>
                         </Carousel>
                     </div>
-                    <div className={"home-product-dash2"}>
-                        {data?.data.slice(12).map((i) => (
-                            // You can save or render the remaining images in home-product-dash2 or use them elsewhere
-                            <div onClick={() => {
-                                navigate("/products/" + i?.id)
-                            }} className={"item-section"} key={i.itemId}>
-                                <div className={"item-image"}>
-                                    <img src={"data:image/png;base64, " + i?.itemImage} width={100}
-                                         alt={i?.itemName}/>
-                                </div>
-
-                                <div className={"item-info"}>
-                                    <p>{i?.itemName}</p>
-                                    <p>{i?.itemDescription}</p>
-                                </div>
-                                <div className={"item-desc"}>
-                                    <div className={"item--desc-detail"}>
-                                        <p>Rs.{i?.itemPerPrice}</p>
-                                    </div>
-                                    <div className={"item-quantity"}>
-                                        <p>Stock:({i?.itemQuantity})</p>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-
-                    </div>
                 </div>
             </div>
-            {/*<div className={"home-footer"}>*/}
-            {/*    <div className={"home-get-help"}>*/}
-            {/*        <h1>GET HELP</h1>*/}
-            {/*        <Link to="/Customercare">*/}
-            {/*            <button>Customer Care</button>*/}
-            {/*        </Link>*/}
-            {/*        <Link to="/Payment">*/}
-            {/*            <button>Payment Options</button>*/}
-            {/*        </Link>*/}
-            {/*        <Link to="/returnandrefundpolicy">*/}
-            {/*            <button>Return and Refund Policy</button>*/}
-            {/*        </Link>*/}
-            {/*        <Link to="/PrivacyPolicy">*/}
-            {/*            <button>Privacy Policy</button>*/}
-            {/*        </Link>*/}
-            {/*        <Link to="/Termsandcondition">*/}
-            {/*            <button>Terms and Conditions</button>*/}
-            {/*        </Link>*/}
-            {/*        <span>@2023 Lugahub Pvt. Ltd. All Rights Reserved</span>*/}
-
-            {/*    </div>*/}
-            {/*    <div className={"home-about-us"}>*/}
-            {/*        <h1>LUGAHUB</h1>*/}
-            {/*        <Link to="/Aboutus">*/}
-            {/*            <button>About Us</button>*/}
-            {/*        </Link>*/}
-            {/*        <Link to="/Contactus">*/}
-            {/*            <button>Contact Us</button>*/}
-            {/*        </Link>*/}
-            {/*        <Link to="/Careers">*/}
-            {/*            <button>Careers</button>*/}
-            {/*        </Link>*/}
-            {/*    </div>*/}
-            {/*    <div className={"home-logos"}>*/}
-            {/*        <span>Connect with us:</span>*/}
-            {/*        <a href="https://www.facebook.com/profile.php?id=61555012223662&is_tour_dismissed=true"*/}
-            {/*           target="_blank" rel="noopener noreferrer">*/}
-            {/*            <img*/}
-            {/*                width={43}*/}
-            {/*                src={"images/fb.png"}*/}
-            {/*                alt="Facebook"*/}
-            {/*            />*/}
-            {/*        </a>*/}
-
-            {/*        <a href="https://www.instagram.com/luga.hub69/"*/}
-            {/*           target="_blank" rel="noopener noreferrer">*/}
-            {/*            <img*/}
-            {/*                width={43}*/}
-            {/*                src={"images/insta.png"}*/}
-            {/*                alt="Facebook"*/}
-            {/*            />*/}
-            {/*        </a>*/}
-            {/*        <a href="https://www.threads.net/@luga.hub69"*/}
-            {/*           target="_blank" rel="noopener noreferrer">*/}
-            {/*            <img*/}
-            {/*                width={43}*/}
-            {/*                src={"images/thread.png"}*/}
-            {/*                alt="X"*/}
-            {/*            />*/}
-            {/*        </a>*/}
-
-
-        {/*        </div>*/}
-
-        {/*    </div>*/}
         </div>
-
-
     );
-};
-
+}
 
 export default Home;

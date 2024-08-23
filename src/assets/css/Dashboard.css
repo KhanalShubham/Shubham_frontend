@@ -65,8 +65,9 @@
     border-bottom-color: black;
 }
 .db-logo img {
-    width:130px; /* Set the desired width of the logo */
-    height: 120px; /* Maintain aspect ratio */
+    object-fit: cover;
+    object-position: center;
+ /* Maintain aspect ratio */
     margin-top: -17px; /* Add top margin for spacing, adjust as needed */
 
 }
